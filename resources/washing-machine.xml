@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/jdbc https://www.springframework.org/schema/jdbc/spring-jdbc.xsd">
+
+	<bean class="com.xworkz.spring.component.waschingmachine.WashingMachine"
+		id="washingMachine">
+		<property name="componyName" value="IFB"></property>
+		<property name="capacity" value="7"></property>
+		<property name="motor" ref="motor"></property>
+		<property name="power" ref="power"></property>
+	</bean>
+	<bean class="com.xworkz.spring.component.waschingmachine.Motor"
+		id="motor">
+		<property name="warantyPeriod" value="10"></property>
+	</bean>
+	<bean class="com.xworkz.spring.component.waschingmachine.Power"
+		id="power">
+		<property name="on" value="true"></property>
+
+	</bean>
+
+</beans>
